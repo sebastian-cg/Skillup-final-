@@ -2,9 +2,75 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/signup_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bg"
     tools:context=".SignUpActivity">
+
+
+    <ImageView
+        android:id="@+id/app_logo_signup"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mainlogo1" />
+
+    <EditText
+        android:id="@+id/username_txtbox_signup"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_edittext_background"
+        android:ems="10"
+        android:hint="@string/un_txtbox"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo_signup" />
+
+    <EditText
+        android:id="@+id/pass_txtbox_signup"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_edittext_background"
+        android:ems="10"
+        android:hint="@string/pass_txtbox"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_txtbox_signup" />
+
+    <EditText
+        android:id="@+id/pass_txtbox"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_edittext_background"
+        android:ems="10"
+        android:hint="@string/reenter_text"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_txtbox_signup" />
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/signup_button_text"
+        android:backgroundTint="@color/button_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_txtbox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
