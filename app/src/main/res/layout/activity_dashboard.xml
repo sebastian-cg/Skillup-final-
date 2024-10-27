@@ -43,7 +43,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tutor_list"
             android:layout_marginTop="8dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:scrollbars="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -68,7 +69,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:layout_marginTop="8dp"
             android:id="@+id/reco_tutor_list_contents"/>
 

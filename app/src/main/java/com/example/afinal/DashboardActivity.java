@@ -27,17 +27,18 @@ public class DashboardActivity extends AppCompatActivity {
         });
         // Top tutor's Card view
         RecyclerView recyclerView = findViewById(R.id.tutor_list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         List<Tutor> tutorsList = new ArrayList<>();
         tutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
+        tutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
 
         TutorAdapter adapter = new TutorAdapter(tutorsList);
         recyclerView.setAdapter(adapter);
 
         // Recommended tutor's Card view
         RecyclerView recoRecyclerView = findViewById(R.id.reco_tutor_list_contents);
-        recoRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recoRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         List<Tutor> recoTutorsList = new ArrayList<>();
         recoTutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
