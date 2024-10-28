@@ -10,4 +10,7 @@
     <string name="tutor_name">Lebron James</string>
     <string name="tutor_job">Basketball Professional</string>
     <string name="tutor_description">Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness.</string>
+    <string name="home_menu_label">Home</string>
+    <string name="profile_menu_label">Profile</string>
+    <string name="menu_menu_label">Menu</string>
 </resources>

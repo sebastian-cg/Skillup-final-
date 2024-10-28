@@ -42,6 +42,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         List<Tutor> recoTutorsList = new ArrayList<>();
         recoTutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
+        recoTutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
+        recoTutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
 
         TutorAdapter recoAdapter = new TutorAdapter(recoTutorsList);
         recoRecyclerView.setAdapter(recoAdapter);
