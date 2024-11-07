@@ -3,6 +3,8 @@ package com.example.afinal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -10,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -59,6 +64,44 @@ public class DashboardActivity extends AppCompatActivity {
         TutorAdapter recoAdapter = new TutorAdapter(recoTutorsList);
         recoRecyclerView.setAdapter(recoAdapter);
 
+        // add function listener to bottom nav
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+
+        bottomNav.setOnNavigationItemSelectedListener(item -> {
+
+            int itemId = item.getItemId();
+            if (itemId == R.id.home_appbar) {
+                showHomeLayout();
+                return true;
+            } else if (itemId == R.id.profile_appbar) {
+                loadFragment(new ProfileFragment());
+                return true;
+            } else if (itemId == R.id.menu_appbar){
+                loadFragment(new MenuFragment());
+                return true;
+            }
+            return false;
+        });
+    }
+    private void loadFragment(Fragment fragment){
+        NestedScrollView nestedScrollView = findViewById(R.id.nested_scroll_view);
+        FrameLayout frameContainer = findViewById(R.id.fragment_container);
+
+        nestedScrollView.setVisibility(View.GONE);
+        frameContainer.setVisibility(View.VISIBLE);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
+
+    }
+    private void showHomeLayout(){
+        NestedScrollView nestedScrollView = findViewById(R.id.nested_scroll_view);
+        FrameLayout frameContainer = findViewById(R.id.fragment_container);
+
+
+        nestedScrollView.setVisibility(View.VISIBLE);
+        frameContainer.setVisibility(View.GONE);
 
     }
 }
