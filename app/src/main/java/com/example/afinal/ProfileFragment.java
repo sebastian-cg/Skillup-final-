@@ -26,7 +26,7 @@ public class ProfileFragment extends Fragment {
 
         usernameTextView = view.findViewById(R.id.username_profile_fragment);
 
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username", "");
 
         usernameTextView.setText(username);

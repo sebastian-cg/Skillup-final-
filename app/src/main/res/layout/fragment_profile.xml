@@ -14,7 +14,6 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/username_profile_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -27,38 +26,65 @@
             android:id="@+id/profile_picture"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="32dp"
             android:layout_gravity="center"
-            android:src="@drawable/example_profile"
-            app:shapeAppearance="@style/circle_image"
-            android:elevation="10dp"/>
-        <TextView
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="5dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username:"/>
-
-        <TextView
             android:layout_marginTop="32dp"
-            android:layout_marginStart="5dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Basic Information: "/>
+            android:elevation="10dp"
+            android:src="@drawable/example_profile"
+            app:shapeAppearance="@style/circle_image" />
 
-        <TextView
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="18dp"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lorem_ipsum"
-            android:justificationMode="inter_word"
-            android:textAlignment="viewStart"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="50dp"
+                android:text="Username: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/username_profile_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="50dp"
+                android:text="username placeholder"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="32dp"
+                android:text="Basic Information: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:justificationMode="inter_word"
+                android:text="@string/lorem_ipsum"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
 
     </LinearLayout>
 
