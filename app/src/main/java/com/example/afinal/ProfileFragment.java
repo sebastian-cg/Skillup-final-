@@ -15,6 +15,7 @@ public class ProfileFragment extends Fragment {
 
     private TextView usernameTextView;
 
+
     public ProfileFragment(){
 
     }
@@ -30,6 +31,11 @@ public class ProfileFragment extends Fragment {
         String username = sharedPreferences.getString("username", "");
 
         usernameTextView.setText(username);
+
+
+
+
+
         return view;
     }
 
