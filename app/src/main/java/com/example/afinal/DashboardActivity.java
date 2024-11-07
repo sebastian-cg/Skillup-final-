@@ -29,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.tutor_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
+
         List<Tutor> tutorsList = new ArrayList<>();
         tutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
         tutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
@@ -43,7 +44,11 @@ public class DashboardActivity extends AppCompatActivity {
         List<Tutor> recoTutorsList = new ArrayList<>();
         recoTutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
         recoTutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
-        recoTutorsList.add(new Tutor("IT Professional", "Bronny James Jr.", "Hi! I'm Bronny James Jr., a professional IT coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
+        recoTutorsList.add(new Tutor("Basketball Professional", "Lebron James", "Hello! I’m Lebron James, a professional basketball coach with over 40 years of experience both playing and coaching. I specialize in skill development, game strategy, and building mental toughness."));
+
+        // disable nested scrolling for each recycler view
+        recyclerView.setNestedScrollingEnabled(false);
+        recoRecyclerView.setNestedScrollingEnabled(false);
 
         TutorAdapter recoAdapter = new TutorAdapter(recoTutorsList);
         recoRecyclerView.setAdapter(recoAdapter);

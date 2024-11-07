@@ -9,83 +9,94 @@
     android:orientation="vertical"
     tools:context=".DashboardActivity">
 
-
-    <EditText
-        android:id="@+id/search_txtbox"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_margin="25dp"
-        android:background="@drawable/search_custom_bg"
-        android:ems="10"
-        android:hint="Search here...."
-        android:drawableEnd="@drawable/baseline_search_24"
-        android:inputType="text"
-        android:paddingEnd="15dp"
-        android:paddingStart="20dp"
-        android:textSize="16sp"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/hero_text_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Top Tutors"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:layout_marginStart="15dp"/>
-
-    <LinearLayout
-        android:id="@+id/top_tutor_list"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:fillViewport="true">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tutor_list"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:scrollbars="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/reco_tutor_list">
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recommended Tutors"
-            android:textSize="24sp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="24dp"
-            android:textStyle="bold"/>
+            android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="8dp"
-            android:id="@+id/reco_tutor_list_contents"/>
+            <EditText
+                android:id="@+id/search_txtbox"
+                android:layout_width="350dp"
+                android:layout_height="48dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/search_custom_bg"
+                android:drawableEnd="@drawable/baseline_search_24"
+                android:ems="10"
+                android:hint="Search here...."
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="15dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/hero_text_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Top Tutors"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/top_tutor_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tutor_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reco_tutor_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Recommended Tutors"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reco_tutor_list_contents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="25dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
         android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:menu="@menu/menu_appbar"
+        app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="32dp"
-        app:itemHorizontalTranslationEnabled="false"/>
+        app:menu="@menu/menu_appbar" />
 
 </LinearLayout>
